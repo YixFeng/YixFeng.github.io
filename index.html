@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>Yixiao Feng</title>
+    <title>Yixiao FENG's Homepage</title>
 
     <meta name="author" content="Yixiao Feng">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,10 +46,7 @@
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  I'm interested in LiDAR-inertial SLAM, large-scale localization and 3D computer vision. 
-                </p>
+                <h2>Publications</h2>
               </td>
             </tr>
           </tbody></table>
@@ -60,8 +57,23 @@
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
             <div class="two" id='bmloc_image'>
-              <img src='images/bmloc.png' width="180">
+              <video  width=100% muted autoplay loop>
+                <source src="bmloc/bmloc.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <img src='bmloc/bmloc.png' width="180">
           </div>
+          <script type="text/javascript">
+            function bmloc_start() {
+              document.getElementById('bmloc_image').style.opacity = "1";
+            }
+  
+            function bmloc_stop() {
+              document.getElementById('bmloc_image').style.opacity = "0";
+            }
+            bmloc_stop()
+          </script>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
           <a href="https://arxiv.org/abs/2404.18192">
