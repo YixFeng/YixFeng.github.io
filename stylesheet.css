@@ -19,12 +19,12 @@ tr,
 p,
 a {
   font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 strong {
   font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -37,7 +37,7 @@ h2 {
 
 .papertitle {
   font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
 }
 
