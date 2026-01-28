@@ -192,12 +192,58 @@
             <table
               style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
               <tbody>
+                <tr onmouseout="relativeloc_full_stop()" onmouseover="relativeloc_full_start()">
+                  <td style="padding: 20px; width:35%; max-width: 35%; vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='relativeloc_full_image'>
+                        <video width=100% muted autoplay loop>
+                          <source src="AirGroundLoc/video.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src='AirGroundLoc/coverpage.png' width=100%>
+                    </div>
+                    <script type="text/javascript">
+                      function relativeloc_full_start() {
+                        document.getElementById('relativeloc_full_image').style.opacity = "1";
+                      }
+
+                      function relativeloc_full_stop() {
+                        document.getElementById('relativeloc_full_image').style.opacity = "0";
+                      }
+                      relativeloc_full_stop()
+                    </script>
+                  </td>
+                  <td style="padding:20px;width:65%;vertical-align:middle">
+                    <a href="https://arxiv.org/abs/2511.06749">
+                      <span class="papertitle">Semi-distributed Cross-modal Air-Ground Relative Localization</span>
+                    </a>
+                    <br>
+                    <a href="https://www.bnrist.tsinghua.edu.cn/info/1220/3908.htm">Weining Lu</a>,
+                    <a href="">Deer Bin</a>,
+                    <a href="">Lian Ma</a>,
+                    <a href="">Ming Ma</a>,
+                    <a href="https://www.researchgate.net/scientific-contributions/Zhihao-Ma-2252329671">Zhihao Ma</a>,
+                    <a href="">Xiangyang Chen</a>,
+                    <a href="">Longfei Wang</a>,
+                    <a href="https://yixfeng.github.io"><strong>Yixiao Feng</strong></a>,
+                    <a href="https://www.researchgate.net/profile/Zhouxian-Jiang">Zhouxian Jiang</a>,
+                    <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&hl=en">Yongliang Shi</a><sup>&dagger;</sup>,
+                    <a href="https://www.au.tsinghua.edu.cn/en/info/1081/3289.htm">Bin Liang</a><sup>&dagger;</sup>
+                    <br>
+                    <br>
+                    <em>IROS 2025</em> (<strong style="color: red;">Oral</strong>)
+                    <br>
+                    <a href="https://arxiv.org/abs/2511.06749">[arXiv]</a>
+                    <a href="https://www.bilibili.com/video/BV1w3NqzuE6k/?spm_id_from=333.1007.top_right_bar_window_history.content.click&vd_source=14445cbbcf51c5ad4b4f342fdb86e724">[Video]</a>
+                  </td>
+                </tr>
                 <tr>
                   <td style="padding: 20px; width: 35%; max-width: 35%; vertical-align: middle;">
                     <img style="width:100%;max-width:100%" src="HighFidelityGS/overview.png" alt="dise">
                   </td>
                   <td style="padding:20px;width:65%;vertical-align:middle">
-                    <a href="https://arxiv.org/pdf/2511.06765">
+                    <a href="https://arxiv.org/abs/2511.06765">
                       <span class="papertitle">Robust and High-Fidelity 3D Gaussian Splatting: Fusing Pose Priors and
                         Geometry Constraints for Texture-Deficient Outdoor Scenes</span>
                     </a>
@@ -214,7 +260,7 @@
                     <br>
                     <em>IROS 2025</em> (<strong style="color: red;">Oral</strong>)
                     <br>
-                    <a href="https://arxiv.org/pdf/2511.06765">[arXiv]</a>
+                    <a href="https://arxiv.org/abs/2511.06765">[arXiv]</a>
                   </td>
                 </tr>
                 <!-- <tr>
