@@ -91,13 +91,11 @@ h2 {
 
 .one {
   width: 240px;
-  height: 240px;
   position: relative;
 }
 
 .two {
   width: 240px;
-  height: 240px;
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
