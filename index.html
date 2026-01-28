@@ -114,78 +114,177 @@
             <tbody>
               <tr>
                 <td style="padding:20px;width:100%;vertical-align:middle">
-                  <h2>Publications</h2>
+                  <div class="pub-header">
+                    <h2>Publications</h2>
+                    <div class="pub-toggle">
+                      <button class="pub-btn active" id="pub-selected-btn" type="button"
+                        onclick="showPubList('selected')">Selected</button>
+                      <span class="pub-sep">|</span>
+                      <button class="pub-btn" id="pub-full-btn" type="button"
+                        onclick="showPubList('full')">Full list</button>
+                    </div>
+                  </div>
                   <p style="font-size: 12px;">*: equal contribution; †: corresponding author(s)</p>
                 </td>
               </tr>
             </tbody>
           </table>
 
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <!-- <td style="padding: 20px; width: 30%; max-width: 30%; vertical-align: top;">
-                  <img style="width:100%;max-width:100%" src="bmloc/bmloc.gif" alt="dise">
-                </td> -->
-              <tr onmouseout="bmloc_stop()" onmouseover="bmloc_start()">
-                <td style="padding:20px;width:25%;vertical-align:middle">
-                  <div class="one">
-                    <div class="two" id='bmloc_image'>
-                      <video width=100% muted autoplay loop>
-                        <source src="bmloc/bmloc.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
+          <div id="pub-selected-list">
+            <table
+              style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr>
+                  <!-- <td style="padding: 20px; width: 30%; max-width: 30%; vertical-align: top;">
+                    <img style="width:100%;max-width:100%" src="bmloc/bmloc.gif" alt="dise">
+                  </td> -->
+                <tr onmouseout="bmloc_stop()" onmouseover="bmloc_start()">
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='bmloc_image'>
+                        <video width=100% muted autoplay loop>
+                          <source src="bmloc/bmloc.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src='bmloc/bmloc.png' width=100%>
                     </div>
-                    <img src='bmloc/bmloc.png' width=100%>
-                  </div>
-                  <script type="text/javascript">
-                    function bmloc_start() {
-                      document.getElementById('bmloc_image').style.opacity = "1";
-                    }
+                    <script type="text/javascript">
+                      function bmloc_start() {
+                        document.getElementById('bmloc_image').style.opacity = "1";
+                      }
 
-                    function bmloc_stop() {
-                      document.getElementById('bmloc_image').style.opacity = "0";
-                    }
-                    bmloc_stop()
-                  </script>
-                </td>
-                <td style="padding:20px;width:75%;vertical-align:top">
-                  <a href="https://arxiv.org/abs/2404.18192">
-                    <span class="papertitle">Block-Map-Based Localization in Large-Scale Environment</span>
-                  </a>
-                  <br>
-                  <a href="https://yixfeng.github.io"><strong>Yixiao Feng</strong></a>*,
-                  <a href="https://scholar.google.com/citations?user=yVrSGoUAAAAJ&hl=en">Zhou Jiang</a>*,
-                  <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&hl=en">Yongliang
-                    Shi</a><sup>&dagger;</sup>,
-                  <a href="https://scholar.google.com/citations?user=7gul9TQAAAAJ&hl=en">Yunlong Feng</a>,
-                  <a href="https://changerc77.github.io">Xiangyu Chen</a>,
-                  <a href="https://sites.google.com/view/fromandto">Hao Zhao</a>,
-                  <a href="https://air.tsinghua.edu.cn/en/info/1046/1196.htm">Guyue Zhou</a>
-                  <br>
-                  <br>
-                  <em>ICRA 2024</em> (<strong style="color: red;">Oral</strong>)
-                  <br>
-                  <a href="https://arxiv.org/abs/2404.18192">[arXiv]</a>
-                  <a href="https://www.youtube.com/watch?v=jJhs0jK-uSI">[Video]</a>
-                  <iframe style="margin-left: 2px; margin-bottom: -5px;"
-                    src="https://ghbtns.com/github-btn.html?user=YixFeng&repo=Block-Map-Based-Localization&type=star&count=true"
-                    frameborder="0" scrolling="0" width="91px" height="20px"></iframe>
-                  <!-- <p></p>
-                  <p style="font-size: 12px;">
-                    We first proposed a localization method based on <strong style="font-size: 12px;">Block-Map
-                      (BM)</strong> for large scenes,
-                    and provide a method for generating BMs and corresponding map-switching strategies. We also proposed
-                    a factor graph optimization method with different marginalization strategies for two cases where the
-                    robot moves within the same map or traverses between different maps. The final results showed that
-                    our method achieved a per-frame computation time up to <strong style="font-size: 12px;">150%
-                      faster</strong> compared to using a global map.
-                  </p> -->
-                </td>
-              </tr>
-            </tbody>
-          </table>
+                      function bmloc_stop() {
+                        document.getElementById('bmloc_image').style.opacity = "0";
+                      }
+                      bmloc_stop()
+                    </script>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:top">
+                    <a href="https://arxiv.org/abs/2404.18192">
+                      <span class="papertitle">Block-Map-Based Localization in Large-Scale Environment</span>
+                    </a>
+                    <br>
+                    <a href="https://yixfeng.github.io"><strong>Yixiao Feng</strong></a>*,
+                    <a href="https://scholar.google.com/citations?user=yVrSGoUAAAAJ&hl=en">Zhou Jiang</a>*,
+                    <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&hl=en">Yongliang
+                      Shi</a><sup>&dagger;</sup>,
+                    <a href="https://scholar.google.com/citations?user=7gul9TQAAAAJ&hl=en">Yunlong Feng</a>,
+                    <a href="https://changerc77.github.io">Xiangyu Chen</a>,
+                    <a href="https://sites.google.com/view/fromandto">Hao Zhao</a>,
+                    <a href="https://air.tsinghua.edu.cn/en/info/1046/1196.htm">Guyue Zhou</a>
+                    <br>
+                    <br>
+                    <em>ICRA 2024</em> (<strong style="color: red;">Oral</strong>)
+                    <br>
+                    <a href="https://arxiv.org/abs/2404.18192">[arXiv]</a>
+                    <a href="https://www.youtube.com/watch?v=jJhs0jK-uSI">[Video]</a>
+                    <iframe style="margin-left: 2px; margin-bottom: -5px;"
+                      src="https://ghbtns.com/github-btn.html?user=YixFeng&repo=Block-Map-Based-Localization&type=star&count=true"
+                      frameborder="0" scrolling="0" width="91px" height="20px"></iframe>
+                    <!-- <p></p>
+                    <p style="font-size: 12px;">
+                      We first proposed a localization method based on <strong style="font-size: 12px;">Block-Map
+                        (BM)</strong> for large scenes,
+                      and provide a method for generating BMs and corresponding map-switching strategies. We also proposed
+                      a factor graph optimization method with different marginalization strategies for two cases where the
+                      robot moves within the same map or traverses between different maps. The final results showed that
+                      our method achieved a per-frame computation time up to <strong style="font-size: 12px;">150%
+                        faster</strong> compared to using a global map.
+                    </p> -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div id="pub-full-list" style="display:none;">
+            <table
+              style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr>
+                  <!-- <td style="padding: 20px; width: 30%; max-width: 30%; vertical-align: top;">
+                    <img style="width:100%;max-width:100%" src="bmloc/bmloc.gif" alt="dise">
+                  </td> -->
+                <tr onmouseout="bmloc_full_stop()" onmouseover="bmloc_full_start()">
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='bmloc_full_image'>
+                        <video width=100% muted autoplay loop>
+                          <source src="bmloc/bmloc.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                      <img src='bmloc/bmloc.png' width=100%>
+                    </div>
+                    <script type="text/javascript">
+                      function bmloc_full_start() {
+                        document.getElementById('bmloc_full_image').style.opacity = "1";
+                      }
+
+                      function bmloc_full_stop() {
+                        document.getElementById('bmloc_full_image').style.opacity = "0";
+                      }
+                      bmloc_full_stop()
+                    </script>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:top">
+                    <a href="https://arxiv.org/abs/2404.18192">
+                      <span class="papertitle">Block-Map-Based Localization in Large-Scale Environment</span>
+                    </a>
+                    <br>
+                    <a href="https://yixfeng.github.io"><strong>Yixiao Feng</strong></a>*,
+                    <a href="https://scholar.google.com/citations?user=yVrSGoUAAAAJ&hl=en">Zhou Jiang</a>*,
+                    <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&hl=en">Yongliang
+                      Shi</a><sup>&dagger;</sup>,
+                    <a href="https://scholar.google.com/citations?user=7gul9TQAAAAJ&hl=en">Yunlong Feng</a>,
+                    <a href="https://changerc77.github.io">Xiangyu Chen</a>,
+                    <a href="https://sites.google.com/view/fromandto">Hao Zhao</a>,
+                    <a href="https://air.tsinghua.edu.cn/en/info/1046/1196.htm">Guyue Zhou</a>
+                    <br>
+                    <br>
+                    <em>ICRA 2024</em> (<strong style="color: red;">Oral</strong>)
+                    <br>
+                    <a href="https://arxiv.org/abs/2404.18192">[arXiv]</a>
+                    <a href="https://www.youtube.com/watch?v=jJhs0jK-uSI">[Video]</a>
+                    <iframe style="margin-left: 2px; margin-bottom: -5px;"
+                      src="https://ghbtns.com/github-btn.html?user=YixFeng&repo=Block-Map-Based-Localization&type=star&count=true"
+                      frameborder="0" scrolling="0" width="91px" height="20px"></iframe>
+                    <!-- <p></p>
+                    <p style="font-size: 12px;">
+                      We first proposed a localization method based on <strong style="font-size: 12px;">Block-Map
+                        (BM)</strong> for large scenes,
+                      and provide a method for generating BMs and corresponding map-switching strategies. We also proposed
+                      a factor graph optimization method with different marginalization strategies for two cases where the
+                      robot moves within the same map or traverses between different maps. The final results showed that
+                      our method achieved a per-frame computation time up to <strong style="font-size: 12px;">150%
+                        faster</strong> compared to using a global map.
+                    </p> -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <script type="text/javascript">
+            function showPubList(which) {
+              var selectedList = document.getElementById('pub-selected-list');
+              var fullList = document.getElementById('pub-full-list');
+              var selectedBtn = document.getElementById('pub-selected-btn');
+              var fullBtn = document.getElementById('pub-full-btn');
+
+              if (which === 'full') {
+                selectedList.style.display = 'none';
+                fullList.style.display = 'block';
+                selectedBtn.classList.remove('active');
+                fullBtn.classList.add('active');
+              } else {
+                selectedList.style.display = 'block';
+                fullList.style.display = 'none';
+                selectedBtn.classList.add('active');
+                fullBtn.classList.remove('active');
+              }
+            }
+          </script>
           <hr>
 
           <table

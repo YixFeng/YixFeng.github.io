@@ -35,6 +35,46 @@ h2 {
   font-size: 22px;
 }
 
+.pub-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pub-toggle {
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.pub-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  font-size: 12px;
+  color: #1772d0;
+  cursor: pointer;
+}
+
+.pub-btn:hover,
+.pub-btn:focus {
+  color: #f09228;
+  text-decoration: none;
+}
+
+.pub-btn.active {
+  color: #111111;
+  font-weight: 600;
+  cursor: default;
+}
+
+.pub-sep {
+  margin: 0 6px;
+  color: #666666;
+}
+
 .papertitle {
   font-family: 'Crimson Text', Georgia, 'Times New Roman', serif;
   font-size: 14px;
