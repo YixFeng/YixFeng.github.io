@@ -801,6 +801,17 @@ hr {
 .service-list {
   margin: 0;
   padding-left: 24px;
+  color: #111111;
+}
+
+.service-list li {
+  color: #111111;
+}
+
+.service-list strong {
+  color: #000000;
+  font-family: "Optima Bold", "Optima", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
 }
 
 .site-footer {
