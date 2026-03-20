@@ -816,17 +816,13 @@ hr {
 
 .site-footer {
   display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.footer-left {
-  min-width: 180px;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
 }
 
 .footer-right {
-  text-align: right;
+  text-align: center;
   font-size: 14px;
   color: #5b5b5b;
 }
