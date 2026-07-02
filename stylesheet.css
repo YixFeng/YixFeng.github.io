@@ -543,6 +543,10 @@ hr {
   transform: none;
 }
 
+.publications-head {
+  align-items: flex-start;
+}
+
 .scholar-link {
   display: inline-flex;
   align-items: center;
@@ -567,6 +571,45 @@ hr {
 .scholar-link .ai-google-scholar:hover,
 .scholar-link .ai-google-scholar:focus {
   color: inherit;
+}
+
+.cite-chart {
+  display: inline-flex;
+  margin-left: auto;
+  line-height: 0;
+  opacity: 0.92;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease;
+}
+
+.cite-chart:hover,
+.cite-chart:focus {
+  opacity: 1;
+}
+
+.cite-chart svg {
+  width: 218px;
+  height: 44px;
+  overflow: visible;
+}
+
+.cite-bar {
+  fill: #a9cdf0;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+.cite-curve {
+  stroke: #c0392b;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.cite-label {
+  fill: #5b5b5b;
+  font-family: "Optima", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
 }
 
 .filter-row {
@@ -912,5 +955,14 @@ hr {
 
   h2 {
     font-size: 26px;
+  }
+
+  .section-head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cite-chart {
+    margin-left: 0;
   }
 }

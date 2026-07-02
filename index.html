@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="icon" href="images/icon.png">
+  <script src="js/citechart.js" defer></script>
 </head>
 
 <body class="site-body">
@@ -138,6 +139,8 @@
       </div>
       <div class="news-panel">
         <div class="news-list">
+          <p>[2026/06] Our work <a href="https://arxiv.org/abs/2606.29259">PL-LIT</a> was accepted by <strong
+              class="news-venue">IROS 2026</strong>.</p>
           <p>[2026/01] Our work <a href="https://arxiv.org/pdf/2509.11197?">DreamNav</a> was accepted by <strong
               class="news-venue">ICRA 2026</strong>.</p>
           <p>[2025/09] Thrilled to start my Ph.D. journey at <span class="news-highlight"><img
@@ -153,13 +156,15 @@
     </section>
 
     <section class="section-block">
-      <div class="section-head">
+      <div class="section-head publications-head">
         <h2 id="publications">Publications
           <a class="scholar-link" href="https://scholar.google.com/citations?user=gfAtyY4AAAAJ&hl=en#"
             aria-label="Google Scholar profile">
             <span class="ai ai-google-scholar"></span>
           </a>
         </h2>
+        <a id="citeChart" class="cite-chart" href="https://scholar.google.com/citations?user=gfAtyY4AAAAJ&hl=en#"
+          title="Citation trend on Google Scholar" aria-label="Citation statistics on Google Scholar"></a>
       </div>
       <div class="filter-row">
         <button class="filter-button active" type="button" data-filter="all"
@@ -242,7 +247,7 @@
               <a href="https://davidlxu.github.io/">Lixin Xu</a>,
               <a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=97">Renjing Xu</a><sup>†</sup>
             </p>
-            <p class="paper-venue"><em>Under Review</em></p>
+            <p class="paper-venue"><em><strong class="venue-short">ArXiv 2026</strong></em></p>
             <div class="paper-actions">
               <a class="action-pill" href="https://gaoyukang33.github.io/PDF-HR/">
                 <i class="fas fa-home" aria-hidden="true"></i>Home
@@ -259,6 +264,47 @@
   title={HR: Pose Distance Fields for Humanoid Robots},
   author={Gu, Yi and Gao, Yukang and Zhou, Yangchen and Chen, Xingyu and Feng, Yixiao and Zhao, Mingle and Mo, Yunyang and Wang, Zhaorui and Xu, Lixin and Xu, Renjing},
   journal={arXiv preprint arXiv:2602.04851},
+  year={2026}
+}</pre>
+          </div>
+        </article>
+
+        <article class="publication-item slam">
+          <div class="paper-side">
+            <div class="paper-media">
+              <img src="PL-LIT/system.png" alt="PL-LIT system overview">
+            </div>
+          </div>
+          <div class="paper-body">
+            <h3 class="paper-title">PL-LIT: A LiDAR-Inertial-Thermal SLAM Using Point-Line Features and Thermographic
+              Mapping</h3>
+            <p class="paper-authors">
+              <a class="author-plain">Jiawei Xia</a>,
+              <span class="self-author">Yixiao Feng</span>,
+              <a href="https://scholar.google.com.hk/citations?user=alz2MpAAAAAJ&hl=en">Yongliang Shi</a><sup>†</sup>,
+              <a class="author-plain">Chao Gao</a><sup>†</sup>,
+              <a href="https://facultyprofiles.hkust-gz.edu.cn/faculty-personal-page?id=97">Renjing Xu</a>,
+              <a href="https://www.bnrist.tsinghua.edu.cn/info/1220/3908.htm">Weining Lu</a>,
+              <a href="https://www.au.tsinghua.edu.cn/en/info/1081/3289.htm">Bin Liang</a>
+            </p>
+            <p class="paper-venue"><em>IEEE/RSJ International Conference on Intelligent Robots and Systems (<strong
+                  class="venue-short">IROS 2026</strong>)</em></p>
+            <div class="paper-actions">
+              <a class="action-pill" href="https://arxiv.org/abs/2606.29259">
+                <i class="fa fa-file-lines" aria-hidden="true"></i>Paper
+              </a>
+              <a class="action-pill" href="https://www.youtube.com/watch?v=JuBfl2GoKwU">
+                <i class="fa fa-video" aria-hidden="true"></i>Results
+              </a>
+              <button class="action-pill" type="button" aria-expanded="false"
+                onclick="toggleBib('bib-pllit', this)">
+                <i class="fas fa-quote-left" aria-hidden="true"></i>Bibtex
+              </button>
+            </div>
+            <pre id="bib-pllit" class="bibtex-block" hidden>@article{xia2026pllit,
+  title={PL-LIT: A LiDAR-Inertial-Thermal SLAM Using Point-Line Features and Thermographic Mapping},
+  author={Xia, Jiawei and Feng, Yixiao and Shi, Yongliang and Gao, Chao and Xu, Renjing and Lu, Weining and Liang, Bin},
+  journal={arXiv preprint arXiv:2606.29259},
   year={2026}
 }</pre>
           </div>
