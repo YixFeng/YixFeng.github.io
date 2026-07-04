@@ -1,0 +1,6 @@
+exclude:
+  - .github/
+  - scripts/
+  - projects/
+  - bmloc/bmloc.gif
+  - PDF-HR/pipeline.pdf
