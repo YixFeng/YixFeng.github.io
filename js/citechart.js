@@ -7,6 +7,12 @@
   var BAR_MS = 380;
   var CURVE_MS = 1000;
   var LABEL_MS = 450;
+  var FALLBACK_DATA = {
+    total: 30,
+    hIndex: 2,
+    years: [2024, 2025, 2026],
+    perYear: [1, 10, 19]
+  };
 
   function el(name, attrs) {
     var node = document.createElementNS(SVGNS, name);
@@ -114,11 +120,12 @@
     var curveDelay = (n - 1) * BAR_DELAY + BAR_MS;
     var length = curve.getTotalLength();
     curve.style.strokeDasharray = length;
+    curve.style.strokeDashoffset = 0;
     curve.animate([{ strokeDashoffset: length + "px" }, { strokeDashoffset: "0px" }], {
       duration: CURVE_MS,
       delay: curveDelay,
       easing: "ease-out",
-      fill: "backwards"
+      fill: "both"
     });
     label.animate([{ opacity: 0 }, { opacity: 1 }], {
       duration: LABEL_MS,
@@ -133,13 +140,14 @@
     host.setAttribute("data-ready", "1");
     fetch("data/citations.json")
       .then(function (response) {
+        if (!response.ok) throw new Error("Citation data unavailable");
         return response.json();
       })
       .then(function (data) {
         render(host, data);
       })
       .catch(function () {
-        host.removeAttribute("data-ready");
+        render(host, FALLBACK_DATA);
       });
   }
 
