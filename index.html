@@ -166,9 +166,9 @@
           title="Citation trend on Google Scholar" aria-label="Citation statistics on Google Scholar"></a>
       </div>
       <div class="filter-row">
-        <button class="filter-button active" type="button" data-filter="all"
+        <button class="filter-button" type="button" data-filter="all"
           onclick="showPublications('all', this)">All</button>
-        <button class="filter-button" type="button" data-filter="selected"
+        <button class="filter-button active" type="button" data-filter="selected"
           onclick="showPublications('selected', this)">Selected</button>
         <span class="filter-divider">/</span>
         <button class="topic-button" type="button" data-filter="humanoid"
@@ -558,6 +558,11 @@
         target.setAttribute('hidden', '');
         trigger.setAttribute('aria-expanded', 'false');
       }
+    }
+
+    var defaultPublicationFilter = document.querySelector('.filter-button.active, .topic-button.active');
+    if (defaultPublicationFilter) {
+      showPublications(defaultPublicationFilter.dataset.filter, defaultPublicationFilter);
     }
 
     document.getElementById('lastupdate').textContent = new Date(document.lastModified).toISOString().slice(0, 10);
