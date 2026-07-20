@@ -21,7 +21,11 @@ jobs:
           python-version: "3.x"
 
       - name: Fetch Google Scholar citation stats
-        run: python scripts/update_citations.py --user gfAtyY4AAAAJ --output data/citations.json
+        run: >-
+          python scripts/update_citations.py
+          --user gfAtyY4AAAAJ
+          --output data/citations.json
+          --keep-existing-on-error
 
       - name: Commit updated citation stats
         run: |
