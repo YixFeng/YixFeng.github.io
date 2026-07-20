@@ -8,10 +8,10 @@
   var CURVE_MS = 1000;
   var LABEL_MS = 450;
   var FALLBACK_DATA = {
-    total: 30,
+    total: 31,
     hIndex: 2,
     years: [2024, 2025, 2026],
-    perYear: [1, 10, 19]
+    perYear: [1, 10, 20]
   };
 
   function el(name, attrs) {
